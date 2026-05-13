@@ -3,6 +3,7 @@
 ## Service status
 
 [![status](https://img.shields.io/uptimerobot/status/m803060356-07ed0027d059d6ea957bb845?label=service&style=flat-square)](https://stats.uptimerobot.com/pn8O2Kuq2m)
+[![online](https://img.shields.io/endpoint?url=https%3A%2F%2Fstremio.yukistreams.xyz%2Fonline.json&style=flat-square)](https://stremio.yukistreams.xyz/configure)
 [![7d](https://img.shields.io/uptimerobot/ratio/7/m803060356-07ed0027d059d6ea957bb845?label=7d&style=flat-square)](https://stats.uptimerobot.com/pn8O2Kuq2m)
 [![30d](https://img.shields.io/uptimerobot/ratio/30/m803060356-07ed0027d059d6ea957bb845?label=30d&style=flat-square)](https://stats.uptimerobot.com/pn8O2Kuq2m)
 [![90d](https://img.shields.io/uptimerobot/ratio/90/m803060356-07ed0027d059d6ea957bb845?label=90d&style=flat-square)](https://stats.uptimerobot.com/pn8O2Kuq2m)
