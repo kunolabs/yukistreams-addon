@@ -1,7 +1,7 @@
 # Yukistreams
 
-[![status](https://img.shields.io/uptimerobot/status/REPLACE_WITH_MONITOR_KEY?label=stremio.yukistreams.xyz&style=flat-square)](https://stats.uptimerobot.com/REPLACE_WITH_PAGE_ID)
-[![uptime](https://img.shields.io/uptimerobot/ratio/30/REPLACE_WITH_MONITOR_KEY?label=30d%20uptime&style=flat-square)](https://stats.uptimerobot.com/REPLACE_WITH_PAGE_ID)
+[![status](https://img.shields.io/uptimerobot/status/ur3500144-60ba4ce7b24152a2324cb3f4?label=stremio.yukistreams.xyz&style=flat-square)](https://stats.uptimerobot.com/pn8O2Kuq2m)
+[![uptime](https://img.shields.io/uptimerobot/ratio/30/ur3500144-60ba4ce7b24152a2324cb3f4?label=30d%20uptime&style=flat-square)](https://stats.uptimerobot.com/pn8O2Kuq2m)
 
 A self-hosted [Stremio](https://www.stremio.com/) addon for anime, movies, series, and Asian drama.
 
@@ -24,7 +24,7 @@ That's it. No account, no signup.
 
 ## Service status
 
-Live status: <https://stats.uptimerobot.com/REPLACE_WITH_PAGE_ID>
+Live status: <https://stats.uptimerobot.com/pn8O2Kuq2m>
 
 If the badges above are red or the status page is down, the public Yukistreams instance is currently unreachable. Check back in a few minutes before opening an issue.
 
