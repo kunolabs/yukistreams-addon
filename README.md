@@ -1,7 +1,7 @@
 # Yukistreams
 
-[![status](https://img.shields.io/uptimerobot/status/ur3500144-60ba4ce7b24152a2324cb3f4?label=stremio.yukistreams.xyz&style=flat-square)](https://stats.uptimerobot.com/pn8O2Kuq2m)
-[![uptime](https://img.shields.io/uptimerobot/ratio/30/ur3500144-60ba4ce7b24152a2324cb3f4?label=30d%20uptime&style=flat-square)](https://stats.uptimerobot.com/pn8O2Kuq2m)
+[![status](https://img.shields.io/uptimerobot/status/m803060356-07ed0027d059d6ea957bb845?label=stremio.yukistreams.xyz&style=flat-square)](https://stats.uptimerobot.com/pn8O2Kuq2m)
+[![uptime](https://img.shields.io/uptimerobot/ratio/30/m803060356-07ed0027d059d6ea957bb845?label=30d%20uptime&style=flat-square)](https://stats.uptimerobot.com/pn8O2Kuq2m)
 
 A self-hosted [Stremio](https://www.stremio.com/) addon for anime, movies, series, and Asian drama.
 
