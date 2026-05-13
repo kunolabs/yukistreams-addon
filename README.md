@@ -1,7 +1,14 @@
 # Yukistreams
 
-[![status](https://img.shields.io/uptimerobot/status/m803060356-07ed0027d059d6ea957bb845?label=stremio.yukistreams.xyz&style=flat-square)](https://stats.uptimerobot.com/pn8O2Kuq2m)
-[![uptime](https://img.shields.io/uptimerobot/ratio/30/m803060356-07ed0027d059d6ea957bb845?label=30d%20uptime&style=flat-square)](https://stats.uptimerobot.com/pn8O2Kuq2m)
+## Service status
+
+[![status](https://img.shields.io/uptimerobot/status/m803060356-07ed0027d059d6ea957bb845?label=service&style=flat-square)](https://stats.uptimerobot.com/pn8O2Kuq2m)
+[![response](https://img.shields.io/uptimerobot/response-time/m803060356-07ed0027d059d6ea957bb845?label=response&style=flat-square)](https://stats.uptimerobot.com/pn8O2Kuq2m)
+[![7d](https://img.shields.io/uptimerobot/ratio/7/m803060356-07ed0027d059d6ea957bb845?label=7d&style=flat-square)](https://stats.uptimerobot.com/pn8O2Kuq2m)
+[![30d](https://img.shields.io/uptimerobot/ratio/30/m803060356-07ed0027d059d6ea957bb845?label=30d&style=flat-square)](https://stats.uptimerobot.com/pn8O2Kuq2m)
+[![90d](https://img.shields.io/uptimerobot/ratio/90/m803060356-07ed0027d059d6ea957bb845?label=90d&style=flat-square)](https://stats.uptimerobot.com/pn8O2Kuq2m)
+
+Live status page: <https://stats.uptimerobot.com/pn8O2Kuq2m>
 
 A self-hosted [Stremio](https://www.stremio.com/) addon for anime, movies, series, and Asian drama.
 
@@ -21,12 +28,6 @@ That's it. No account, no signup.
 - **Movies & Series** — torrent and HTTP sources
 - **Asian Drama** — MKVDrama HTTP resolver
 - **Catalogs** — `YS Anime`, `YS Movies`, `YS Series`, `YS Drama`
-
-## Service status
-
-Live status: <https://stats.uptimerobot.com/pn8O2Kuq2m>
-
-If the badges above are red or the status page is down, the public Yukistreams instance is currently unreachable. Check back in a few minutes before opening an issue.
 
 ## Reporting issues
 
