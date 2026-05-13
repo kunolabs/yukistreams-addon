@@ -1,0 +1,42 @@
+# Content-based auto-labels for issues.
+# Each top-level key is a label; the regex array matches against title + body.
+# These add to whatever the YAML form already specified.
+
+"area: anime":
+  - '(?i)\b(anime|nekobt|animetosho|nyaa|horriblesubs|seadex|toshokan)\b'
+
+"area: movies":
+  - '(?i)\b(movie|film|imdb tt[0-9]+)\b'
+
+"area: series":
+  - '(?i)\b(series|tv show|episode|season|s\d{2}e\d{2})\b'
+
+"area: drama":
+  - '(?i)\b(drama|kdrama|cdrama|jdrama|mkvdrama|asian)\b'
+
+"area: real-debrid":
+  - '(?i)\b(real[- ]?debrid|rd|debrid|cached|premiumize|alldebrid)\b'
+
+"area: tmdb":
+  - '(?i)\b(tmdb|themoviedb|metadata|poster|backdrop)\b'
+
+"area: install":
+  - '(?i)\b(install|configure|profile|manifest|stremio addon)\b'
+
+"area: tunnel":
+  - '(?i)\b(cloudflare|cloudflared|tunnel|502|gateway)\b'
+
+"platform: android":
+  - '(?i)\b(android|google tv|chromecast)\b'
+
+"platform: ios":
+  - '(?i)\b(ios|iphone|ipad)\b'
+
+"platform: desktop":
+  - '(?i)\b(windows|macos|linux|stremio desktop)\b'
+
+"needs: info":
+  - '(?i)^(.|\n){0,80}$'
+
+"security":
+  - '(?i)\b(security|vulnerability|exploit|leak|credential)\b'

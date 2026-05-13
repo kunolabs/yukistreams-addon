@@ -1,0 +1,47 @@
+name: Source / catalog request
+description: Suggest a new provider or category
+title: "[request] "
+labels: ["enhancement", "triage"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of request?
+      options:
+        - New stream source (provider/scraper)
+        - New catalog (e.g. Korean variety, Bollywood)
+        - New metadata source (e.g. TVDB, AniList)
+        - Filter / sort improvement
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Source / catalog name
+      placeholder: e.g. NyaaPi / KissAsian / TVDB
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Public URL of the source
+      placeholder: https://...
+  - type: dropdown
+    id: auth
+    attributes:
+      label: Does it require an API key?
+      options:
+        - "No"
+        - "Yes — users can self-sign up"
+        - "Yes — operator-controlled key (private tracker, etc.)"
+        - "Not sure"
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this source?
+      description: Coverage gap, audience, language, quality, etc.
+    validations:
+      required: true

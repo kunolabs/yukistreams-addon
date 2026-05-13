@@ -1,0 +1,25 @@
+# Auto-label issues based on title/body content.
+# Runs on issue open/edit; combines with the `labels:` field in the YAML
+# issue forms (which sets the base labels — bug/enhancement/triage).
+name: Issue labeler
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: github/issue-labeler@v3.4
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          configuration-path: .github/labeler.yml
+          enable-versioned-regex: 0
+          include-title: 1
+          include-body: 1
+          sync-labels: 0

@@ -1,5 +1,8 @@
 # Yukistreams
 
+[![status](https://img.shields.io/uptimerobot/status/REPLACE_WITH_MONITOR_KEY?label=stremio.yukistreams.xyz&style=flat-square)](https://stats.uptimerobot.com/REPLACE_WITH_PAGE_ID)
+[![uptime](https://img.shields.io/uptimerobot/ratio/30/REPLACE_WITH_MONITOR_KEY?label=30d%20uptime&style=flat-square)](https://stats.uptimerobot.com/REPLACE_WITH_PAGE_ID)
+
 A self-hosted [Stremio](https://www.stremio.com/) addon for anime, movies, series, and Asian drama.
 
 > Bring your own keys. Your credentials are encrypted into your install URL and are never logged or shared with the operator.
@@ -19,18 +22,17 @@ That's it. No account, no signup.
 - **Asian Drama** — MKVDrama HTTP resolver
 - **Catalogs** — `YS Anime`, `YS Movies`, `YS Series`, `YS Drama`
 
+## Service status
+
+Live status: <https://stats.uptimerobot.com/REPLACE_WITH_PAGE_ID>
+
+If the badges above are red or the status page is down, the public Yukistreams instance is currently unreachable. Check back in a few minutes before opening an issue.
+
 ## Reporting issues
 
-Found a bug? Open an issue here:
+Found a bug? Open an issue here. Use the templates — they auto-tag and route correctly:
 
-**<https://github.com/ywkuno/yukistreams-addon/issues>**
-
-Please include:
-
-- What you were watching (title + episode if applicable)
-- What you expected vs. what happened
-- The catalog / stream source involved (e.g. "YS Anime → AnimeTosho")
-- Whether you have Real-Debrid configured
+**<https://github.com/kunolabs/yukistreams-addon/issues/new/choose>**
 
 **Do NOT paste your install URL** — it contains your encrypted API keys. The operator does not need it to debug.
 

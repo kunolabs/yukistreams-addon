@@ -1,0 +1,95 @@
+name: Bug report
+description: Something isn't working
+title: "[bug] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! A few rules before you submit:
+
+        - **Do NOT paste your install URL.** It contains encrypted API keys.
+        - Search existing issues first; duplicates get closed.
+        - Include the title you were trying to watch — "no streams" without context is unactionable.
+  - type: input
+    id: title-watching
+    attributes:
+      label: What were you trying to watch?
+      description: Title + episode (for series/anime)
+      placeholder: e.g. Frieren S01E04 / Dune Part Two (2024)
+    validations:
+      required: true
+  - type: dropdown
+    id: catalog
+    attributes:
+      label: Which catalog were you using?
+      options:
+        - YS Anime
+        - YS Movies
+        - YS Series
+        - YS Drama
+        - YS Mixed
+        - Search results (Stremio search bar)
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Which stream source / addon row?
+      description: The row inside the catalog. Skip if N/A.
+      placeholder: e.g. AnimeTosho / NekoBT / Torrentio mirror
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      placeholder: e.g. A 1080p stream should appear / The episode list should populate
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened?
+      placeholder: e.g. No streams returned / Stream URL returned 403 / Stremio shows "addon error"
+    validations:
+      required: true
+  - type: dropdown
+    id: realdebrid
+    attributes:
+      label: Do you have Real-Debrid configured?
+      options:
+        - "Yes"
+        - "No (P2P / direct only)"
+        - "Not sure"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Stremio platform
+      multiple: true
+      options:
+        - Web (stremio.com)
+        - Desktop (Windows)
+        - Desktop (macOS)
+        - Desktop (Linux)
+        - Android
+        - iOS
+        - Android TV / Google TV
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Stremio version, screenshots (NO install URL visible), what you've already tried.
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I did NOT paste my install URL or API keys anywhere in this report.
+          required: true
+        - label: I searched existing issues for duplicates.
+          required: true

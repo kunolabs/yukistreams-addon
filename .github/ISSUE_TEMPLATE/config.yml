@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Install Yukistreams
+    url: https://stremio.yukistreams.xyz/configure
+    about: Configure and install the addon (do not open an issue for this).
+  - name: Service status
+    url: https://stats.uptimerobot.com/REPLACE_WITH_PAGE_ID
+    about: Check if stremio.yukistreams.xyz is currently up before reporting downtime.
