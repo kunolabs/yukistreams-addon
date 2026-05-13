@@ -10,9 +10,9 @@
 
 Live status page: <https://stats.uptimerobot.com/pn8O2Kuq2m>
 
-A self-hosted [Stremio](https://www.stremio.com/) addon for anime, movies, series, and Asian drama.
+The **Asian streaming gateway** for [Stremio](https://www.stremio.com/) — anime and Korean / Japanese / Chinese drama as primary catalogs, with international movies and series alongside.
 
-> Bring your own keys. Your credentials are encrypted into your install URL and are never logged or shared with the operator.
+> Bring your own keys. Credentials are AEAD-encrypted into your install URL and are never logged or shared with the operator.
 
 ## Install
 
@@ -25,23 +25,25 @@ That's it. No account, no signup.
 ## What's included
 
 - **Anime** — multiple sources, Real-Debrid–aware
-- **Movies & Series** — torrent and HTTP sources
-- **Asian Drama** — MKVDrama HTTP resolver
+- **Asian drama** — MKVDrama HTTP resolver (no torrents required for most content), plus KissKH / OneTouchTV scrapers
+- **Movies & series** — international torrent indexes (YTS, EZTV, ThePirateBay, TorrentGalaxy, 1337x, RARBG)
 - **Catalogs** — `YS Anime`, `YS Movies`, `YS Series`, `YS Drama`
 
-## Reporting issues
+## Support the Project
 
-Found a bug? Open an issue here. Use the templates — they auto-tag and route correctly:
+Yukistreams is solo-operated and community-driven. 🚀
 
-**<https://github.com/kunolabs/yukistreams-addon/issues/new/choose>**
+- ⭐ **Star** this repo
+- ☕ **Donate** via [Ko-fi](https://ko-fi.com/kunolabs)
+- 🐛 **Report issues** via the [issue tracker](https://github.com/kunolabs/yukistreams-addon/issues/new/choose) — auto-tagged templates make triage fast
 
-**Do NOT paste your install URL** — it contains your encrypted API keys. The operator does not need it to debug.
+**Heads up:** never paste your install URL anywhere — it's an active credential. Anyone with it can use your embedded API keys via this addon.
 
 ## Privacy
 
 - The addon operator has no access to your API keys. They are encrypted client-side into your install URL using a key the operator never sees decrypted in-band.
 - The operator does not log search queries, watch history, or stream URLs.
-- All traffic to upstream sources (Real-Debrid, TMDB, trackers) goes from the Yukistreams server, so those services see Yukistreams's IP, not yours.
+- All upstream traffic (Real-Debrid, TMDB, trackers) goes via the Yukistreams server, so those services see Yukistreams's IP, not yours.
 
 ## Status
 
