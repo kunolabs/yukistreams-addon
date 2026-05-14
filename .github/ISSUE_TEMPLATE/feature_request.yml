@@ -1,0 +1,70 @@
+name: Feature request
+description: Suggest something new — a feature, integration, or improvement
+title: "[request] "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest something. A few framing notes before you write:
+
+        - **No guarantees.** Yukistreams is solo-operated. Every request gets read, but only some get built. Priority depends on operator bandwidth, fit, and how many people want the same thing.
+        - **For brand-new content sources / catalogs**, use the "Source / catalog request" template instead — it's more focused.
+        - **For bugs**, use "Bug report" — features and bugs route differently in triage.
+        - **Use cases land better than "would be nice to have".** Tell us what you're trying to do and why current options don't work.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of feature?
+      options:
+        - New debrid provider (TorBox / AllDebrid / Premiumize / etc.)
+        - New filter or sort option (resolution / seeders / age / bitrate / etc.)
+        - UI / configure page improvement
+        - Performance / reliability improvement
+        - Operator-only / advanced setting
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: What are you actually trying to do?
+      description: |
+        e.g. "I want to watch dramas without RD because my RD account got banned"
+        e.g. "I have a slow connection and want to prefer 540p streams over 1080p"
+      placeholder: Tell us the underlying problem.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: What specifically would help?
+      description: Concrete features or behaviors — what should change in the addon?
+      placeholder: e.g. "Add a quality preference toggle in /configure that biases toward the user's selected resolution"
+    validations:
+      required: true
+  - type: dropdown
+    id: importance
+    attributes:
+      label: How important to you?
+      options:
+        - Nice-to-have — would use it occasionally
+        - Real workflow change — would use it regularly
+        - Blocking — current behavior makes the addon hard to use
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've tried?
+      description: Other addons, manual workarounds, or workflows that partially address this. Helps gauge how unique your request is.
+      placeholder: e.g. "Tried Torrentio + RDC manual, but the multi-step workflow is rough"
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I searched existing issues to make sure this isn't already requested or rejected.
+          required: true
+        - label: I understand there's no commitment to implement this — operator may close as "won't do" if it doesn't fit project scope.
+          required: true
