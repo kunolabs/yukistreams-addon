@@ -34,7 +34,7 @@ That's it. No account, no signup.
 Yukistreams is solo-operated and community-driven. 🚀
 
 - ⭐ **Star** this repo
-- ☕ **Donate** via [Ko-fi](https://ko-fi.com/kunolabs)
+- [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Y8Y21YZBGA)
 - 🐛 **Report issues** via the [issue tracker](https://github.com/kunolabs/yukistreams-addon/issues/new/choose) — auto-tagged templates make triage fast
 
 **Heads up:** never paste your install URL anywhere — it's an active credential. Anyone with it can use your embedded API keys via this addon.
