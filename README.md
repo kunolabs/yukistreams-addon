@@ -24,10 +24,10 @@ That's it. No account, no signup.
 
 ## What's included
 
-- **Anime** — multiple sources, Real-Debrid–aware
-- **Asian drama** — MKVDrama HTTP resolver (no torrents required for most content), plus KissKH / OneTouchTV scrapers
-- **Movies & series** — international torrent indexes (YTS, EZTV, ThePirateBay, TorrentGalaxy, 1337x, RARBG)
-- **Catalogs** — `YS Anime`, `YS Movies`, `YS Series`, `YS Drama`
+- **Anime** — Multiple sources (RD + HTTP)
+- **Asian drama** — Multiple sources (MKV, KKH, OTT, etc.)
+- **Movies & series** — International indexes (YTS, EZTV, ThePirateBay, TorrentGalaxy, 1337x, RARBG)
+- **Catalogs** — Anime, Asia Movie, Asian Drama Series.
 
 ## Support the Project
 
