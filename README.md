@@ -1,12 +1,14 @@
 # Yukistreams
 
-A multi-debrid Stremio addon for movies, series, and anime, with a strong drama and Asian-content lane.
+A Stremio addon for anime, Asian drama, movies, and series, with optional debrid support.
 
-> **Project status:** closed source. This repository is a public-facing issue tracker and reference. The implementation lives in a private repository maintained by the operator. Bug reports and feature requests are very welcome; please file them under [Issues](../../issues).
+> **Project status:** Yukistreams is closed source. I use this repo for public notes, release updates, and issue reports. Bugs and feature requests are welcome under [Issues](../../issues).
 
 ## Latest hotfix
 
-v1.0.5 hotfix.1 keeps the v1.0.5 addon line but refreshes the configure page with the cleaner one-page flow, clearer source/result controls, and a public-safe Real-Debrid playback compatibility update. Existing installs can keep working; reconfigure if you want to review the new setup flow or refresh older source selections.
+v1.0.5 hotfix.1 is a small polish pass for the current v1.0.5 addon line. The configure page is cleaner, source/result choices are easier to scan, and Real-Debrid playback avoids a few filename patterns that have recently caused upstream failures.
+
+Existing installs can keep working. Reconfigure only if you want to review the new setup flow, add TorBox, or refresh older source choices.
 
 ## What it does
 
@@ -15,7 +17,7 @@ v1.0.5 hotfix.1 keeps the v1.0.5 addon line but refreshes the configure page wit
 - **Quality-aware Asian-drama resolver.** Keeps per-show and per-quality results warm where possible, with fallback handling so a single host failure is less likely to break playback.
 - **Anime catalogs and cross-references** via AniList, Kitsu, and MAL-style IDs. Yukistreams keeps Anime catalog cards compatible with Stremio while using AniList data behind the scenes, with genre/year/season/day filters where Stremio exposes them.
 - **TMDB-enriched metadata** for `tt:` / `tmdb:` / `tvdb:` IDs when a TMDB key is configured server-side.
-- **Encrypted profile tokens** (AES-256-GCM). Your debrid keys and MediaFlow password are encrypted into your install URL and never logged, never echoed back to clients, never shared with the operator after submission.
+- **Encrypted profile tokens** (AES-256-GCM). Your debrid keys and MediaFlow password are encrypted into your install URL and are not shown again after you save.
 
 ## Install
 
@@ -37,7 +39,7 @@ The addon still works without a debrid key — you'll see Anime catalogs, suppor
 
 ## Direct HTTP Sources
 
-Yukistreams can show some playback rows even when you do not configure Real-Debrid, TorBox, or MediaFlow. These rows return the final upstream media URL to Stremio. The operator's VPS does lightweight lookup only and does not relay video bytes for these direct rows.
+Yukistreams can show some playback rows even when you do not configure Real-Debrid, TorBox, or MediaFlow. These rows return the final upstream media URL to Stremio. The server does lightweight lookup only and does not relay video bytes for these direct rows.
 
 | Source | Lane | Direct without debrid | Needs MediaFlow | Notes |
 | --- | --- | ---: | ---: | --- |
@@ -69,9 +71,9 @@ Source-specific catalogs such as MKVDrama and OneTouchTV rows are available in t
 ## Security model
 
 - The addon does **not** host or store any video content. It indexes publicly available torrent and HTTP sources, and resolves playback through your own supported debrid account.
-- Your debrid keys are encrypted server-side with AES-256-GCM and a server-only secret. The encrypted token is never returned to clients; only the short alias install URL is.
-- The operator runs the addon in `INSTANCE_MODE=public` so per-user fallback to operator credentials is disabled. Every user must bring their own debrid key.
-- The hosted public instance exposes only the normal Stremio install and playback surfaces to users. Operator tools are private and are not part of the public addon API.
+- Your debrid keys are encrypted with AES-256-GCM and are not shown back to the browser after setup.
+- The public instance does not use my personal debrid credentials for user installs. Bring your own supported debrid account if you want debrid-backed results.
+- The hosted public instance exposes only the normal Stremio install and playback surfaces to users. Maintainer tools are private and are not part of the public addon API.
 - The addon's configure page is iframe-friendly so the Stremio install flow works.
 
 ## What's reportable
@@ -110,4 +112,4 @@ Each influenced parts of the addon design and is credited with respect.
 
 - This addon is provided as-is, with no warranty. Use at your own risk and in compliance with your local laws.
 - You are responsible for your own use of Real-Debrid, TorBox, MediaFlow, and any third-party streaming services configured through this addon.
-- The operator is not affiliated with Stremio, Real-Debrid, TorBox, MediaFlow, or any source provider.
+- I am not affiliated with Stremio, Real-Debrid, TorBox, MediaFlow, or any source provider.

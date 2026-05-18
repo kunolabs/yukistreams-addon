@@ -1,23 +1,23 @@
 # Changelog
 
-Notable changes per release. Dates are the operator's local time.
+Notable user-facing changes per release. Dates use my local time.
 
 ## [1.0.5 Hotfix 1] — 2026-05-18
 
 ### Changed
 
-- **Cleaner configure flow.** The configure page now uses the native one-page flow with the polished Yukistreams visual pass, anime option toggle, source chips, result sliders, quality/language filters, and a floating ready-to-install bar.
-- **Public-safe install controls.** Copy URL and Install in Stremio still use the encrypted profile install URL, while public users do not see debug manifest controls.
-- **Real-Debrid playback compatibility.** Real-Debrid retrieval avoids filename patterns currently being rejected upstream. This filter is server-side and specific to the Real-Debrid retrieval lane, so TorBox, direct HTTP, and P2P rows are not hidden by it.
+- **Cleaner configure flow.** The setup page now has a calmer one-page layout, clearer source chips, result sliders, quality/language filters, and a floating ready-to-install bar.
+- **Simpler install controls.** Copy URL and Install in Stremio still use the encrypted profile install URL, while public users only see the normal install actions.
+- **Real-Debrid playback compatibility.** Real-Debrid results avoid a few filename patterns that have recently caused upstream playback failures. This only affects the Real-Debrid path; TorBox, direct HTTP, and P2P rows are separate.
 
 ### Fixed
 
-- **Configure control sync.** Presets, anime visibility, result format preview, quality filters, language filters, and result count sliders now update from the actual native form controls.
-- **Configure layout polish.** Debrid key entry, Get key/Add alignment, step glow states, section numerals, footer links, and mobile/tap affordances now match the updated design more closely.
+- **Configure controls.** Presets, anime visibility, result format preview, quality filters, language filters, and result sliders now update more reliably.
+- **Configure polish.** Debrid key entry, Get key/Add alignment, step glow states, section numerals, footer links, and mobile/tap feedback were cleaned up.
 
 ### Note
 
-- Existing installs can keep working. Reconfigure if you want to review the new setup flow, add TorBox, or refresh older source selections.
+- Existing installs can keep working. Reconfigure only if you want to review the new setup flow, add TorBox, or refresh older source selections.
 
 ## [1.0.5] — 2026-05-17
 
