@@ -2,6 +2,37 @@
 
 Notable user-facing changes per release. Dates use my local time.
 
+## [1.0.5 Hotfix 3] - 2026-05-20
+
+### Improved
+
+**MKV**
+
+- Dedupe fixes.
+- Resolution labels are more reliable now.
+- Stream host fail/error handling.
+
+**Anime**
+
+- Improved anime title mapping.
+- Direct play routing improvements.
+
+### Note
+
+- Reinstall not required.
+
+## [1.0.5 Hotfix 2] - 2026-05-18
+
+### Fixed
+
+- **Configure labels and previews.** Result-format presets keep their symbols, preview labels, and tooltip placement after the setup-page refresh.
+- **Configure alignment.** Small buttons, compact controls, and optional sections are cleaned up for desktop and smaller screens.
+- **Playback reliability follow-up.** A small routing stability update shipped without changing existing install URLs or encrypted profile links.
+
+### Note
+
+- Existing installs can keep working. Reconfigure only if you want the latest setup-page polish.
+
 ## [1.0.5 Hotfix 1] - 2026-05-18
 
 ### Changed
