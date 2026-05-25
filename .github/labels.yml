@@ -1,0 +1,27 @@
+- name: needs-triage
+  color: FEF2C0
+  description: Needs maintainer review.
+
+- name: needs-info
+  color: F9D0C4
+  description: Waiting for title, client, version, provider, or reproduction details.
+
+- name: accepted
+  color: 0E8A16
+  description: Accepted for an upcoming fix or improvement.
+
+- name: planned
+  color: 1D76DB
+  description: Planned for a future version.
+
+- name: external-service
+  color: C5DEF5
+  description: Likely caused by Stremio, a debrid provider, MediaFlow, or a source site.
+
+- name: duplicate
+  color: CFD3D7
+  description: Same report as another issue.
+
+- name: not-planned
+  color: E4E669
+  description: Not planned for Yukistreams.
