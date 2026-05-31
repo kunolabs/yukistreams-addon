@@ -6,11 +6,15 @@ A Stremio addon for anime, Asian drama, movies, and series, with optional debrid
 
 ## Latest update
 
-v1.0.6 restores catalog visibility controls in the configure page and adds Mini Drama to the Asian Drama catalog set.
+v1.0.7 is a playback reliability refresh for Anime and Asian drama rows.
 
-You can enable, disable, or fully clear visible catalog rows again. Recent playback fixes from the v1.0.5 hotfix line are included, including MKVDrama routing cleanup, anime title matching improvements, Android TV friendlier Anikoto HLS handling, and cleaner debrid labels.
+Anime results should appear more consistently, especially for titles that have both Stremio anime IDs and public torrent releases. Asian-drama rows should also load faster from warm cache and better keep the selected episode and quality aligned.
 
-Reinstall is not required. Reconfigure only if you want to change catalog visibility or if Stremio keeps showing an older cached catalog list.
+Catalog pages are also more tolerant of temporary upstream hiccups, so a short provider wobble is less likely to break browsing.
+
+Some upcoming source catalogs may appear in preview mode. Preview rows are for browsing only until playback support is ready.
+
+Existing installs keep working. Reinstall is not required.
 
 ## What it does
 
@@ -47,7 +51,7 @@ Yukistreams can show some playback rows even when you do not configure Real-Debr
 | Source | Lane | Direct without debrid | Needs MediaFlow | Notes |
 | --- | --- | ---: | ---: | --- |
 | MKVDrama | Asian drama | [x] | [ ] | Direct rows are available when the source resolves to hosts such as Pixeldrain, Gofile, or other final media-file URLs. Protected/container hosts may still need a debrid route or source-specific resolver discovery. |
-| KissKH | Asian drama/movie | [x] | [ ] | Emits final HLS/video URLs directly where available. |
+| KissKH | Asian drama/movie | [~] | [ ] | Temporarily paused on the hosted public instance when the source rejects server traffic. |
 | OneTouchTV | Asian drama/movie | [x] | [~] | Direct HLS-capable. User MediaFlow can help for some HLS handling when configured, but it is not required for direct rows. |
 | AsiaFlix | Asian drama/movie | [x] | [~] | Direct HLS/MP4/SharePoint rows where available. Some embed hosts are MediaFlow fallback candidates. |
 | KKPhim | Vietnamese movie/series | [x] | [~] | Final HLS sources can play directly; MediaFlow wrapping may be used by profiles that configured it. |
@@ -71,6 +75,8 @@ The default install gives you:
 - **Series:** Search · Trending · Top Rated · YS Asian Latest / Korean / Japanese / Chinese / Hong Kong Drama
 
 Source-specific catalogs such as MKVDrama and OneTouchTV rows are available in the configure page when they are healthy enough for public use. The `YS` prefix keeps catalog titles short on Stremio's home screen.
+
+Some experimental catalogs may be visible as preview-only. They can be browsed, but stream results remain disabled until those sources are promoted for playback.
 
 ## Security model
 

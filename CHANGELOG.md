@@ -2,6 +2,22 @@
 
 Notable user-facing changes per release. Dates use my local time.
 
+## [1.0.7] — 2026-05-31
+
+### Improved
+
+**Playback**
+
+- Anime stream results should appear more consistently for current and older titles.
+- Asian-drama streams load faster from warm cache and keep the selected episode and quality better aligned.
+- Unavailable debrid hosters now show clearer playback notices instead of misleading setup errors.
+- Catalog pages are more tolerant of temporary upstream hiccups.
+- Some upcoming catalog rows can be browsed as preview-only while playback stays disabled until ready.
+
+### Note
+
+- Existing installs keep working. Reinstall not required.
+
 ## [1.0.6] — 2026-05-25
 
 ### Added
@@ -11,10 +27,21 @@ Notable user-facing changes per release. Dates use my local time.
 - Restored the configure-page catalog chooser so catalogs can be enabled, disabled, or fully cleared.
 - Added Mini Drama to the public Asian Drama catalog set.
 
+**Configure**
+
+- Saved aliases now restore result-format presets, custom formatter tokens, and language/flag filter choices when edited.
+- Anime source choices now use Nyaa.si, NekoBT, then AniDex, and stream search stops once post-filter usable anime results are found.
+- Fresh movie/series torrent defaults now show only the live-smoked public providers: YTS, EZTV, and ThePirateBay.
+
+**Streams**
+
+- Hidden legacy torrent providers no longer run as automatic fallbacks for fresh profiles, and TokyoTosho is not used as a fallback.
+- Stream rows keep the compact Yuki Direct/MF/provider labels and cached debrid lightning labels.
+
 ### Note
 
-- Catalog choices now reflect the current public catalog set.
-- Reconfigure to change catalog visibility. Reinstall only if Stremio keeps showing an older cached catalog list.
+- Reconfigure to pick up catalog/source visibility changes. Reinstall only if Stremio keeps showing an older cached catalog list.
+- The hidden torrent adapters still need later research; this release removes noisy defaults rather than pretending dead or private-only sources are healthy.
 
 ## [1.0.5 Hotfix 7] — 2026-05-25
 

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-label="Yukistreams day one install chart">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061112"/>
+      <stop offset="0.58" stop-color="#071817"/>
+      <stop offset="1" stop-color="#030607"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38d7c8"/>
+      <stop offset="0.55" stop-color="#49f0b4"/>
+      <stop offset="1" stop-color="#95ffcc"/>
+    </linearGradient>
+    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#38d7c8" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#38d7c8" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="760" rx="42" fill="url(#bg)"/>
+  <rect x="1.5" y="1.5" width="1397" height="757" rx="40" fill="none" stroke="#153633" stroke-width="3"/>
+
+  <text x="72" y="102" fill="#ecf7f3" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="44" font-weight="800">Yukistreams installs</text>
+  <text x="72" y="144" fill="#829892" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="3">FIRST PUBLIC DAY</text>
+
+  <g transform="translate(72 194)">
+    <text x="0" y="106" fill="#48f0b7" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="126" font-weight="900">1,016</text>
+    <text x="6" y="150" fill="#cfe7df" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="750">total installs in the first 24 hours</text>
+  </g>
+
+  <g transform="translate(74 430)">
+    <rect x="0" y="0" width="1252" height="250" rx="28" fill="#061013" stroke="#12302d" stroke-width="2"/>
+    <g stroke="#153532" stroke-width="1.5" opacity="0.62">
+      <path d="M64 44H1194"/>
+      <path d="M64 92H1194"/>
+      <path d="M64 140H1194"/>
+      <path d="M64 188H1194"/>
+    </g>
+    <g fill="#123932" opacity="0.82">
+      <rect x="82" y="191" width="38" height="19" rx="7"/>
+      <rect x="153" y="184" width="38" height="26" rx="7"/>
+      <rect x="224" y="174" width="38" height="36" rx="7"/>
+      <rect x="295" y="161" width="38" height="49" rx="7"/>
+      <rect x="366" y="142" width="38" height="68" rx="7"/>
+      <rect x="437" y="124" width="38" height="86" rx="7"/>
+      <rect x="508" y="103" width="38" height="107" rx="7"/>
+      <rect x="579" y="81" width="38" height="129" rx="7"/>
+      <rect x="650" y="62" width="38" height="148" rx="7"/>
+      <rect x="721" y="49" width="38" height="161" rx="7"/>
+      <rect x="792" y="36" width="38" height="174" rx="7"/>
+      <rect x="863" y="28" width="38" height="182" rx="7"/>
+      <rect x="934" y="22" width="38" height="188" rx="7"/>
+      <rect x="1005" y="18" width="38" height="192" rx="7"/>
+      <rect x="1076" y="14" width="38" height="196" rx="7"/>
+      <rect x="1147" y="12" width="38" height="198" rx="7"/>
+    </g>
+    <path d="M82 210 C175 198 241 188 334 158 S515 103 595 78 S760 42 850 32 S1032 18 1186 12 L1186 210 Z" fill="url(#fill)"/>
+    <path d="M82 210 C175 198 241 188 334 158 S515 103 595 78 S760 42 850 32 S1032 18 1186 12" fill="none" stroke="#1b4b45" stroke-width="18" stroke-linecap="round" opacity="0.28"/>
+    <path d="M82 210 C175 198 241 188 334 158 S515 103 595 78 S760 42 850 32 S1032 18 1186 12" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/>
+    <circle cx="1186" cy="12" r="14" fill="#071817" stroke="#93ffca" stroke-width="6"/>
+
+    <text x="64" y="232" fill="#78908b" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18">0h</text>
+    <text x="613" y="232" text-anchor="middle" fill="#78908b" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18">12h</text>
+    <text x="1194" y="232" text-anchor="end" fill="#78908b" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18">24h</text>
+    <text x="1194" y="34" text-anchor="end" fill="#cfe7df" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="750">1,016</text>
+  </g>
+</svg>
