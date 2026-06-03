@@ -6,11 +6,11 @@ A Stremio addon for anime, Asian drama, movies, and series, with optional debrid
 
 ## Latest update
 
-v1.0.7 is a playback reliability refresh for Anime and Asian drama rows.
+v1.0.8 is a discovery reliability refresh for Anime, Asian drama, movies, and series.
 
-Anime results should appear more consistently, especially for titles that have both Stremio anime IDs and public torrent releases. Asian-drama rows should also load faster from warm cache and better keep the selected episode and quality aligned.
+Asian-drama shelves and detail pages recover better from temporary source outages using already-known results. Anime matching also understands alternate episode numbering and title aliases better for harder-to-match season/cour releases.
 
-Catalog pages are also more tolerant of temporary upstream hiccups, so a short provider wobble is less likely to break browsing.
+Stream labels are cleaner, with less duplicated release-group noise and clearer language badges. Availability checks are steadier behind the scenes, reducing empty-row churn and repeated lookups.
 
 Some upcoming source catalogs may appear in preview mode. Preview rows are for browsing only until playback support is ready.
 

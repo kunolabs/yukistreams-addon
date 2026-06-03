@@ -2,6 +2,22 @@
 
 Notable user-facing changes per release. Dates use my local time.
 
+## [1.0.8] — 2026-06-03
+
+### Improved
+
+**Playback and discovery**
+
+- Asian-drama shelves and detail pages recover better from temporary source outages using already-known results.
+- Anime episode matching handles alternate numbering, title aliases, and harder-to-match season/cour releases more consistently.
+- Stream labels are cleaner, with less duplicated release-group noise and clearer language badges.
+- Availability checks are steadier behind the scenes, reducing empty-row churn and repeated lookups.
+
+### Note
+
+- Existing installs keep working. Reinstall not required.
+- Some upcoming source work may be tested privately or on nightly first; public playback remains limited to promoted sources.
+
 ## [1.0.7] — 2026-05-31
 
 ### Improved
