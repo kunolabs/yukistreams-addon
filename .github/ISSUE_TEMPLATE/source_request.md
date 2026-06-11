@@ -1,12 +1,12 @@
 ---
-name: New source / scraper request
-about: Suggest a new torrent index, Asian-drama site, or HTTP source for Yukistreams to evaluate.
+name: New source / catalog request
+about: Suggest a new catalog area, region, metadata source, or playback source for Yukistreams to evaluate.
 title: "[Source] "
 labels: source-request, needs-triage
 assignees: ''
 ---
 
-## Source
+## Request
 
 - **Name:**
 - **URL:**
@@ -14,24 +14,25 @@ assignees: ''
 
 ## Why it's worth adding
 
-<!-- e.g. "Covers Thai drama that KissKH and OneTouchTV miss" -->
+<!-- What coverage gap would this solve? -->
 
-## How it serves streams
+## What kind of support are you asking for?
 
-- [ ] Public torrent index (we read torrent metadata and resolve via supported debrid providers)
-- [ ] Direct HLS / MP4 hosted on the source's own CDN
-- [ ] Direct stream from a known extractor host (Streamwish, Vidmoly, etc.)
-- [ ] Container-style (single page with multiple host links per episode, like MKVDrama)
+- [ ] New catalog or category
+- [ ] New metadata source
+- [ ] New playback source
+- [ ] New filter or sort option
 - [ ] Other
 
 ## Reliability
 
 - [ ] Source has been working consistently for at least 3 months
-- [ ] Source has a known rate limit or anti-scraping behaviour (please describe)
-- [ ] Source requires login / paywall (we won't add these)
+- [ ] Source can be used without a personal login
+- [ ] Source appears stable across desktop and mobile browsers
+- [ ] Not sure
 
-## Example episode page
+## Example page
 
-<!-- A specific URL on the source where Yukistreams could test resolution. Helps a lot. -->
+<!-- A specific public page that shows the requested coverage. Do not include private credentials. -->
 
 ## Anything else

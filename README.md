@@ -1,125 +1,123 @@
 # Yukistreams
 
-A Stremio addon for anime, Asian drama, movies, and series, with optional debrid support.
+A private Stremio addon for anime, Asian drama, movies, and series, with
+optional bring-your-own debrid support.
 
-> **Project status:** Yukistreams is closed source. I use this repo for public notes, release updates, and issue reports. Bugs and feature requests are welcome under [Issues](../../issues).
+> **Project status:** Yukistreams is closed source. This public repository is
+> used for release notes, install guidance, and issue reports.
 
-## Latest update
+## Latest Update
 
-v1.0.8 is a discovery reliability refresh for Anime, Asian drama, movies, and series.
+v1.1.0 is a source reliability and provider options refresh.
 
-Asian-drama shelves and detail pages recover better from temporary source outages using already-known results. Anime matching also understands alternate episode numbering and title aliases better for harder-to-match season/cour releases.
-
-Stream labels are cleaner, with less duplicated release-group noise and clearer language badges. Availability checks are steadier behind the scenes, reducing empty-row churn and repeated lookups.
-
-Some upcoming source catalogs may appear in preview mode. Preview rows are for browsing only until playback support is ready.
+- More Anime, Asian-drama, movie, and series lookups can recover from temporary
+  source slowdowns using safer remembered matches.
+- Asian-drama detail pages keep preferred titles, descriptions, episode dates,
+  and episode labels more consistently.
+- Setup and status pages stay lighter during busy periods.
+- Additional experimental debrid provider choices may appear on hosted
+  instances where they are enabled. Real-Debrid and TorBox remain the primary
+  stable debrid options.
 
 Existing installs keep working. Reinstall is not required.
 
-## What it does
+## What Yukistreams Does
 
-- **Multi-debrid streaming.** Aggregates public torrent indexes (Nyaa, YTS, EZTV, TPB, and ~15 more) and resolves cached results through your own Real-Debrid or TorBox account. Cached/direct rows appear first by default; uncached download rows are optional and otherwise only appear when nothing cached/direct is available.
-- **Direct HTTP sources for Asian drama plus first anime coverage.** MKVDrama, OneTouchTV, AsiaFlix, KKPhim, OPhim, and first-pass Anikoto anime route probing — selected per-user.
-- **Quality-aware Asian-drama resolver.** Keeps per-show and per-quality results warm where possible, with fallback handling so a single host failure is less likely to break playback.
-- **Anime catalogs and cross-references** via AniList, Kitsu, and MAL-style IDs. Yukistreams keeps Anime catalog cards compatible with Stremio while using AniList data behind the scenes, with genre/year/season/day filters where Stremio exposes them.
-- **Anime torrent matching.** Nyaa/NyaaSi, AniDex, and optional NekoBT searches understand mapped cour/season episode numbers when the identity map has that relationship.
-- **TMDB-enriched metadata** for `tt:` / `tmdb:` / `tvdb:` IDs when a TMDB key is configured server-side.
-- **Encrypted profile tokens** (AES-256-GCM). Your debrid keys and MediaFlow password are encrypted into your install URL and are not shown again after you save.
+Yukistreams adds curated Stremio catalogs and stream rows for:
+
+- Anime discovery and episode matching.
+- Asian drama discovery and direct-source rows where available.
+- Movies and series through selected public index and debrid workflows.
+- Metadata-aware detail pages with posters, summaries, seasons, episodes, and
+  sensible display-language handling.
+- Optional profile preferences for catalogs, quality, languages, labels, and
+  debrid services.
+
+The addon is designed to prefer ready-to-play rows when possible, avoid noisy
+duplicates, and keep known-good matches useful when a source is temporarily slow
+or unavailable.
 
 ## Install
 
 1. Open Stremio.
-2. Click the addon catalog → Community Addons, or paste this URL into the addon search box:
+2. Search Community Addons, or paste this manifest URL into Stremio:
 
-   ```
+   ```text
    https://stremio.yukistreams.xyz/manifest.json
    ```
 
-3. Click Install. Stremio will open the configure page in an iframe.
-4. Add Real-Debrid and/or TorBox service rows, or leave debrid services empty for zero-key Anime/Asian-source testing. Pick your catalog/quality/language preferences, then click **Install in Stremio** or **Copy URL**.
+3. Open the configure page.
+4. Choose the catalogs and playback options you want.
+5. Add your own supported debrid credentials if you want debrid-backed results.
+6. Click **Install in Stremio** or copy the generated install URL.
 
-The same install URL works on PC, mobile, and Shield TV via Stremio's account sync.
+The same install URL works across your Stremio devices through account sync.
 
-### Don't have a debrid account?
+## Debrid And Direct Rows
 
-The addon still works without a debrid key — you'll see Anime catalogs, supported catalog filters, direct HTTP rows from supported Asian-drama sources, and anime HTTP rows only when a source is direct-safe or your profile has MediaFlow configured. A supported debrid account is recommended for the full experience.
+Yukistreams can be used with or without a debrid account:
 
-## Direct HTTP Sources
+- With a supported debrid account, cached debrid rows are preferred when
+  available.
+- Without a debrid account, you can still use supported catalogs and direct rows
+  when a source exposes a safe direct playback path.
+- MediaFlow can be configured by users who need compatible handling for some
+  HTTP playback cases.
+- Experimental provider choices may be visible on some hosted instances, but
+  they should be treated as preview options until they receive broader live
+  validation.
 
-Yukistreams can show some playback rows even when you do not configure Real-Debrid, TorBox, or MediaFlow. These rows return the final upstream media URL to Stremio. The server does lightweight lookup only and does not relay video bytes for these direct rows.
+Availability is title, episode, region, profile, and source dependent. If a row
+cannot be checked or played safely, Yukistreams skips it instead of pretending it
+is ready.
 
-| Source | Lane | Direct without debrid | Needs MediaFlow | Notes |
-| --- | --- | ---: | ---: | --- |
-| MKVDrama | Asian drama | [x] | [ ] | Direct rows are available when the source resolves to hosts such as Pixeldrain, Gofile, or other final media-file URLs. Protected/container hosts may still need a debrid route or source-specific resolver discovery. |
-| KissKH | Asian drama/movie | [~] | [ ] | Temporarily paused on the hosted public instance when the source rejects server traffic. |
-| OneTouchTV | Asian drama/movie | [x] | [~] | Direct HLS-capable. User MediaFlow can help for some HLS handling when configured, but it is not required for direct rows. |
-| AsiaFlix | Asian drama/movie | [x] | [~] | Direct HLS/MP4/SharePoint rows where available. Some embed hosts are MediaFlow fallback candidates. |
-| KKPhim | Vietnamese movie/series | [x] | [~] | Final HLS sources can play directly; MediaFlow wrapping may be used by profiles that configured it. |
-| OPhim | Vietnamese movie/series | [x] | [ ] | Final HLS source rows are direct. |
-| Anikoto | Anime | [x] | [~] | Direct HLS rows are available when the upstream host accepts Stremio proxy headers. Embed-only paths may need extractor support. |
-| Anizone | Anime | [x] | [ ] | Direct HLS from episode pages. |
-| ANIMEGG | Anime | [x] | [ ] | Direct MP4 after source redirect resolution. |
-| AnimeUnity | Anime | [x] | [ ] | Direct signed MP4 rows. |
-| Anikuro / AllManga / AllAnime | Anime | [x] | [ ] | Uses source API metadata, then returns the decoded upstream HLS URL directly. |
-| AnimePahe via Anikuro | Anime | [x] | [ ] | Direct AnimePahe/Kwik HLS with required referer headers. |
-| Hianime.ms / VidNest AnimePahe | Anime | [x] | [ ] | Direct HLS from the verified Hianime.ms / VidNest AnimePahe lane. |
+## Privacy And Security
 
-Direct HTTP availability is source and episode dependent. If a source only exposes a browser challenge, an embed page without a supported extractor, or a route that requires server-side media transport, Yukistreams skips it instead of proxying video through the public VPS.
+- Yukistreams does not host, store, or relay video files.
+- Your debrid credentials are encrypted into your private install URL and are
+  not shown back after setup.
+- The public hosted instance does not use maintainer debrid credentials for user
+  installs.
+- Maintainer diagnostics and operations tools are private and are not part of
+  the public addon API.
+- You are responsible for your own use of Stremio, debrid services, MediaFlow,
+  and any third-party services configured through the addon.
 
-## Catalogs
+## Reporting Issues
 
-The default install gives you:
+Please open an issue when something user-facing breaks.
 
-- **Anime:** Search · Current Season · Airing · Trending · Top Rated
-- **Movies:** Search · Trending · Top Rated · YS Korean / Japanese / Asian Movies
-- **Series:** Search · Trending · Top Rated · YS Asian Latest / Korean / Japanese / Chinese / Hong Kong Drama
+Useful reports include:
 
-Source-specific catalogs such as MKVDrama and OneTouchTV rows are available in the configure page when they are healthy enough for public use. The `YS` prefix keeps catalog titles short on Stremio's home screen.
+- The title, year, season, and episode.
+- Whether the issue is catalog, metadata, configure, install, or playback.
+- The debrid provider you selected, if any.
+- Whether the row was cached, direct, or a notice row.
+- Stremio platform, such as desktop, Android TV, mobile, or web.
+- A screenshot when the behavior is visual.
 
-Some experimental catalogs may be visible as preview-only. They can be browsed, but stream results remain disabled until those sources are promoted for playback.
+Please avoid posting private install URLs, debrid tokens, passwords, or full
+logs that may contain credentials.
 
-## Security model
+## Roadmap Shape
 
-- The addon does **not** host or store any video content. It indexes publicly available torrent and HTTP sources, and resolves playback through your own supported debrid account.
-- Your debrid keys are encrypted with AES-256-GCM and are not shown back to the browser after setup.
-- The public instance does not use my personal debrid credentials for user installs. Bring your own supported debrid account if you want debrid-backed results.
-- The hosted public instance exposes only the normal Stremio install and playback surfaces to users. Maintainer tools are private and are not part of the public addon API.
-- The addon's configure page is iframe-friendly so the Stremio install flow works.
+The public instance is updated conservatively:
 
-## What's reportable
-
-**Bugs (please file these):**
-- Streams returning empty for titles you know have public torrents.
-- MKVDrama / OneTouchTV / Anikoto resolver failures with specific titles.
-- Stremio errors after install (no streams, no metadata, wrong language defaults).
-- Configure-page UI bugs.
-
-**Feature requests:**
-- New Asian-drama / anime sources to evaluate.
-- Catalog presets / language filters.
-- Anything you wish was here.
-
-**Not reportable here:**
-- Real-Debrid or TorBox account issues (contact the service's support team).
-- Stremio app bugs (contact the Stremio team).
-- Source-code requests (project is closed source; you can fork the addon API surface yourself but the implementation is not published).
+- Changes are tested on nightly before public release.
+- Experimental sources and provider options can stay hidden or gated until they
+  are stable enough for public use.
+- Public release notes describe user-visible behavior, not private operational
+  topology or source-specific internals.
 
 ## Acknowledgements
 
-This addon stands on the shoulders of a lot of public Stremio addon prior art:
+Yukistreams is influenced by the broader Stremio addon ecosystem: debrid-first
+addons, anime metadata projects, source-health tooling, and community feedback
+from users testing across desktop, mobile, and TV devices.
 
-- **Torrentio** for the torrent-provider matrix and quality/source naming conventions.
-- **Comet** for the debrid-first cache pipeline.
-- **StremThru** for the debrid store abstraction shape.
-- **Amatsu** for anime catalog and AniList/Kitsu/MAL ID compatibility.
-- **Yastream** for KissKH / OneTouchTV / AsiaFlix adapter conventions.
-- **Sootio** for MKVDrama-style HTTP source handling.
-- **AIOmetadata** for the multi-source ID resolver concept.
+## Disclaimer
 
-Each influenced parts of the addon design and is credited with respect.
-
-## Disclaimers
-
-- This addon is provided as-is, with no warranty. Use at your own risk and in compliance with your local laws.
-- You are responsible for your own use of Real-Debrid, TorBox, MediaFlow, and any third-party streaming services configured through this addon.
-- I am not affiliated with Stremio, Real-Debrid, TorBox, MediaFlow, or any source provider.
+Yukistreams is provided as-is, with no warranty. Use it at your own risk and in
+compliance with your local laws and the terms of any services you configure. The
+project is not affiliated with Stremio, Real-Debrid, TorBox, MediaFlow, TMDB, or
+any third-party content provider.

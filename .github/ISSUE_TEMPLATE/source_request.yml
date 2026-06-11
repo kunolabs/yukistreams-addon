@@ -8,9 +8,9 @@ body:
     attributes:
       label: What kind of request?
       options:
-        - New stream source (provider/scraper)
+        - New playback source
         - New catalog (e.g. Korean variety, Bollywood)
-        - New metadata source (e.g. TVDB, AniList)
+        - New metadata source
         - Filter / sort improvement
         - Other
     validations:
@@ -19,7 +19,7 @@ body:
     id: name
     attributes:
       label: Source / catalog name
-      placeholder: e.g. NyaaPi / KissAsian / TVDB
+      placeholder: e.g. source name, catalog category, or metadata service
     validations:
       required: true
   - type: input
@@ -34,7 +34,7 @@ body:
       options:
         - "No"
         - "Yes — users can self-sign up"
-        - "Yes — operator-controlled key (private tracker, etc.)"
+        - "Yes — private or invite-only access"
         - "Not sure"
     validations:
       required: true
