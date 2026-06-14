@@ -28,8 +28,8 @@ assignees: ''
 - **Addon version visible in Stremio:** (Settings → Addons → Yukistreams → Version field)
 - **Install URL form:** short alias (`/p.xxxxx/...`) or per-user URL? Don't paste the URL itself.
 - **Debrid provider(s) configured:** None / Real-Debrid / TorBox / both / other. Do not paste API keys.
-- **Playback path involved (if known):** Catalog / Metadata / Direct row / Debrid row / Configure page / Other
-- **Title** (if reproducible against a specific show): include title, year, season, and episode where possible.
+- **Area involved (if known):** Catalog / Metadata page / Playback stream / Debrid result / Configure page / Other
+- **Title or visible ID** (if reproducible against a specific show): e.g. `Perfect Crown (2026)`
 
 ## Error text or screenshots
 

@@ -1,14 +1,14 @@
 ---
-name: New source / catalog request
-about: Suggest a new catalog area, region, metadata source, or playback source for Yukistreams to evaluate.
-title: "[Source] "
+name: Coverage / source request
+about: Suggest a public catalog area, region, language, or source for Yukistreams to evaluate.
+title: "[Coverage] "
 labels: source-request, needs-triage
 assignees: ''
 ---
 
 ## Request
 
-- **Name:**
+- **Name or site:**
 - **URL:**
 - **Region / language focus:**
 
@@ -19,9 +19,9 @@ assignees: ''
 ## What kind of support are you asking for?
 
 - [ ] New catalog or category
-- [ ] New metadata source
-- [ ] New playback source
-- [ ] New filter or sort option
+- [ ] Better title / episode matching
+- [ ] More playback availability
+- [ ] Subtitle or language coverage
 - [ ] Other
 
 ## Reliability
@@ -31,7 +31,7 @@ assignees: ''
 - [ ] Source appears stable across desktop and mobile browsers
 - [ ] Not sure
 
-## Example page
+## Example public page
 
 <!-- A specific public page that shows the requested coverage. Do not include private credentials. -->
 

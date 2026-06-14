@@ -3,6 +3,23 @@
 Notable user-facing changes per release. This public changelog intentionally
 describes behavior, not private implementation details.
 
+## [1.2.0] - 2026-06-14
+
+### Improved
+
+- Catalog and metadata lookups recover more gracefully when sources are slow or
+  temporarily unavailable.
+- Search pages avoid repeated empty refreshes during typo or no-match queries.
+- Posters and artwork are reused more efficiently so browsing feels smoother.
+- Setup profiles can keep more precise metadata and artwork preferences without
+  changing existing defaults.
+- Playback checks are steadier across Anime, Asian drama, movies, and series.
+
+### Note
+
+- Existing installs keep working. Reinstall not required.
+- Nightly/private additions remain separate until they are explicitly launched.
+
 ## [1.1.0] - 2026-06-11
 
 ### Improved

@@ -8,16 +8,16 @@ optional bring-your-own debrid support.
 
 ## Latest Update
 
-v1.1.0 is a source reliability and provider options refresh.
+v1.2.0 focuses on faster catalogs, steadier metadata, and smoother playback
+checks.
 
-- More Anime, Asian-drama, movie, and series lookups can recover from temporary
-  source slowdowns using safer remembered matches.
-- Asian-drama detail pages keep preferred titles, descriptions, episode dates,
-  and episode labels more consistently.
-- Setup and status pages stay lighter during busy periods.
-- Additional experimental debrid provider choices may appear on hosted
-  instances where they are enabled. Real-Debrid and TorBox remain the primary
-  stable debrid options.
+- Catalog and metadata lookups recover more gracefully when sources are slow or
+  temporarily unavailable.
+- Search pages avoid repeated empty refreshes during typo or no-match queries.
+- Posters and artwork are reused more efficiently so browsing feels smoother.
+- Setup profiles can keep more precise metadata and artwork preferences without
+  changing existing defaults.
+- Playback checks are steadier across Anime, Asian drama, movies, and series.
 
 Existing installs keep working. Reinstall is not required.
 
