@@ -3,6 +3,24 @@
 Notable user-facing changes per release. This public changelog intentionally
 describes behavior, not private implementation details.
 
+## [1.3.0] - 2026-06-18
+
+### Improved
+
+- Configured install links stay more reliable across devices during busy
+  hosted-instance periods.
+- Some HLS playback rows use steadier compatibility handling for TV-style
+  players.
+- Asian-drama fallback rows can recover better when a preferred host is
+  unavailable.
+- Additional Anime source coverage is available for supported titles.
+- Browsing and playback checks should stay smoother during normal public use.
+
+### Note
+
+- Existing installs keep working. Reinstall not required.
+- Nightly/private additions remain separate until they are explicitly launched.
+
 ## [1.2.0] - 2026-06-14
 
 ### Improved
@@ -11,8 +29,10 @@ describes behavior, not private implementation details.
   temporarily unavailable.
 - Search pages avoid repeated empty refreshes during typo or no-match queries.
 - Posters and artwork are reused more efficiently so browsing feels smoother.
-- Setup profiles can keep more precise metadata and artwork preferences without
-  changing existing defaults.
+- Metadata priority controls now explain when Auto or Source is the better
+  choice.
+- KissKH source-specific catalogs are available again as opt-in Asian drama and
+  movie rows after live source checks.
 - Playback checks are steadier across Anime, Asian drama, movies, and series.
 
 ### Note

@@ -8,16 +8,17 @@ optional bring-your-own debrid support.
 
 ## Latest Update
 
-v1.2.0 focuses on faster catalogs, steadier metadata, and smoother playback
-checks.
+v1.3.0 focuses on profile reliability, playback compatibility, and smoother
+hosted-instance behavior.
 
-- Catalog and metadata lookups recover more gracefully when sources are slow or
-  temporarily unavailable.
-- Search pages avoid repeated empty refreshes during typo or no-match queries.
-- Posters and artwork are reused more efficiently so browsing feels smoother.
-- Setup profiles can keep more precise metadata and artwork preferences without
-  changing existing defaults.
-- Playback checks are steadier across Anime, Asian drama, movies, and series.
+- Configured install links stay more reliable across devices during busy
+  periods.
+- Some HLS playback rows use steadier compatibility handling for TV-style
+  players.
+- Asian-drama fallback rows can recover better when a preferred host is
+  unavailable.
+- Additional Anime source coverage is available for supported titles.
+- Browsing and playback checks should stay smoother during normal public use.
 
 Existing installs keep working. Reinstall is not required.
 
