@@ -8,19 +8,23 @@ optional bring-your-own debrid support.
 
 ## Latest Update
 
-v1.3.0 focuses on profile reliability, playback compatibility, and smoother
-hosted-instance behavior.
+v1.5.0 focuses on fresher Asian catalogs, faster results, and cleaner variety
+seasons.
 
-- Configured install links stay more reliable across devices during busy
-  periods.
-- Some HLS playback rows use steadier compatibility handling for TV-style
-  players.
-- Asian-drama fallback rows can recover better when a preferred host is
-  unavailable.
-- Additional Anime source coverage is available for supported titles.
-- Browsing and playback checks should stay smoother during normal public use.
+- New Asian Shows and Recently Updated Asian Shows surface fresh playable
+  arrivals and newly observed seasons or episodes.
+- Poster mappings survive cache pressure and can keep serving the last good
+  image during a temporary upstream failure.
+- Multi-source catalog cards retain the strongest complementary metadata fields.
+- Dedicated Asian show and movie search cuts duplicate search shelves.
+- Long-running variety shows keep numbered or annual seasons together while
+  regional editions and spinoffs remain separate.
+- Direct, Proxy, and Debrid discovery runs independently so a slow lane is less
+  likely to hold back the others.
 
-Existing installs keep working. Reinstall is not required.
+Existing installs keep working. If Stremio keeps an older manifest cached,
+reinstall the same profile URL once to reveal the new discovery and search
+shelves.
 
 ## What Yukistreams Does
 

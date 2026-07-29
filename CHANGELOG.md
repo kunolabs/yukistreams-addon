@@ -3,6 +3,48 @@
 Notable user-facing changes per release. This public changelog intentionally
 describes behavior, not private implementation details.
 
+## [1.5.0] - 2026-07-29
+
+### Improved
+
+- New Asian Shows and Recently Updated Asian Shows make fresh arrivals and
+  newly available episodes easier to find.
+- Poster mappings remain available under cache pressure, with the last good
+  image retained through temporary upstream failures.
+- Multi-source catalog cards combine complementary artwork, descriptions,
+  genres, cast, and identity data instead of replacing the whole card.
+- Dedicated Asian show and movie search reduces duplicate search shelves, while
+  faster source scheduling shortens slow or empty waits.
+- Long-running variety shows keep numbered or annual seasons together without
+  folding regional editions and spinoffs into the wrong series.
+- Direct, Proxy, and Debrid results are discovered independently so a slow lane
+  is less likely to hold back the others.
+
+### Note
+
+- Existing installs keep working. If Stremio keeps an older manifest cached,
+  reinstall the same profile URL once to reveal the new discovery and search
+  shelves.
+- Nightly/private additions remain separate until explicitly launched.
+
+## [1.4.0] - 2026-07-18
+
+### Improved
+
+- Fresh profiles use a smaller, currently qualified Anime source mix, reducing
+  empty and duplicate rows while preserving representative subbed coverage.
+- Some Asian-drama episodes recover their intended high-quality container more
+  reliably when a source page is slow or unavailable.
+- Existing saved source choices remain available when a profile is edited.
+- Operators can enable an optional regional Anime fallback with strict audio
+  and subtitle requirements.
+
+### Note
+
+- Existing installs keep working. Reconfigure only if you want the new default
+  source mix.
+- Nightly/private additions remain separate until explicitly launched.
+
 ## [1.3.0] - 2026-06-18
 
 ### Improved
