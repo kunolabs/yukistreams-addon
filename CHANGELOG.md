@@ -3,6 +3,26 @@
 Notable user-facing changes per release. This public changelog intentionally
 describes behavior, not private implementation details.
 
+## [1.5.1] - 2026-07-29
+
+### Improved
+
+- Catalog browsing and health checks stay responsive when a hosted instance
+  has accumulated a large cache.
+- Asian searches avoid repeating the same source lookup across regional
+  catalog labels.
+- Background maintenance begins after the service is available and proceeds
+  gradually, reducing slow recovery after an update or restart.
+- Busy request periods use available server capacity more effectively.
+- Annual variety listings refresh into one rolling-series card where supported.
+- Repeated refresh messages are quieter during busy periods while useful
+  failure evidence remains available to operators.
+
+### Note
+
+- Existing installs keep working. Reinstall not required.
+- Nightly/private additions remain separate until explicitly launched.
+
 ## [1.5.0] - 2026-07-29
 
 ### Improved
