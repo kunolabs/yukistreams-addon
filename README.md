@@ -8,18 +8,18 @@ optional bring-your-own debrid support.
 
 ## Latest Update
 
-v1.5.1 focuses on steadier browsing and faster recovery during busy periods.
+v1.7.3 focuses on cleaner discovery, steadier episode pages, and simpler
+direct-playback setup.
 
-- Catalog browsing and health checks stay responsive with a larger accumulated
-  cache.
-- Asian searches avoid repeating the same source lookup across regional labels.
-- Background maintenance proceeds gradually after startup.
-- Busy request periods use available server capacity more effectively.
-- Annual variety listings refresh into one rolling-series card where supported.
+- Direct HTTP choices follow the selected Asian or Anime focus more closely.
+- Episode pages retain richer season lists and avoid internal route tokens in
+  titles.
+- Search favors strong local matches and keeps uncertain regional or annual
+  editions separate.
+- A combined Asian Variety shelf adds optional Korea and China filters.
+- The optional WebStreamr integration has been retired so maintained direct
+  sources stay clearer.
 - Existing installs keep working without reinstalling.
-
-The v1.5.0 catalog freshness, artwork, search, output scheduling, and variety
-identity improvements remain included.
 
 ## What Yukistreams Does
 

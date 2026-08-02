@@ -3,6 +3,96 @@
 Notable user-facing changes per release. This public changelog intentionally
 describes behavior, not private implementation details.
 
+## [1.7.3] - 2026-08-02
+
+### Improved
+
+- Direct HTTP choices follow the selected Asian or Anime catalog focus more
+  closely.
+- Provider-owned episode pages retain richer season lists and avoid exposing
+  internal route tokens as titles.
+- Search favors strong local matches first, fills genuine gaps from eligible
+  sources, and keeps regional or annual editions separate when uncertain.
+- A combined Asian Variety shelf offers Korean and Chinese discovery with
+  optional region filters, while source-specific shelves remain optional.
+- The optional WebStreamr integration has been retired so direct playback can
+  focus on maintained sources.
+
+Existing installs keep working. Reinstall not required.
+
+## [1.7.2] - Unreleased
+
+### Improved
+
+- Profiles can choose Direct HTTP, Hybrid, or Torrent and Debrid playback.
+- Anime Zero-Key setup shows qualified direct sources without unrelated
+  torrent or transport controls.
+- Multi-season, absolute-numbered, and batch Anime releases are matched more
+  conservatively before playback.
+- Optional Anime torrent supplements can be enabled on nightly without
+  changing the default source set.
+
+### Note
+
+- This is a non-production candidate. Public deployment requires separate
+  operator approval.
+- Existing public installs remain on the current stable release.
+
+## [1.7.1] - Unreleased
+
+### Improved
+
+- Asian shelves and representative searches begin warming earlier after a
+  hosted service restarts.
+- Different Asian searches no longer risk reusing an unrelated cached result
+  set.
+- Background activity and graceful draining are reported more consistently on
+  busy hosted instances.
+- Release checks retain stronger test and coverage evidence before an update
+  can leave nightly.
+
+### Note
+
+- This is a non-production candidate. Public deployment requires separate
+  operator approval.
+- Existing public installs remain on the current stable release.
+
+## [1.7.0] - Unreleased
+
+### Improved
+
+- Background cleanup is separated from active catalog and playback requests.
+- Readiness more accurately reflects startup, maintenance, and graceful
+  shutdown while the existing health response stays compatible.
+- Variety and Anime identity safeguards cover more season, regional, special,
+  and episode-mapping cases.
+- Recovery and release checks are stricter before an update can leave nightly.
+
+### Note
+
+- This is a non-production candidate. Public deployment requires separate
+  operator approval.
+- Existing public installs remain on the current stable release.
+
+## [1.6.0] - Unreleased
+
+### Improved
+
+- New and Recently Updated shelves use stronger freshness and episode-growth
+  signals with stable, duplicate-free pagination.
+- Regional variety editions and Anime franchise boundaries are matched more
+  conservatively, leaving uncertain cases separate.
+- Asian and Anime source reliability is tracked independently for Direct,
+  Proxy, and Debrid results so transient failures can recover cleanly.
+- Durable title corrections remain effective after restarts and later catalog
+  refreshes.
+
+### Note
+
+- This is a non-production candidate. Public deployment requires separate
+  operator approval.
+- Existing public installs remain on the current stable release.
+
 ## [1.5.1] - 2026-07-29
 
 ### Improved
@@ -13,8 +103,6 @@ describes behavior, not private implementation details.
   catalog labels.
 - Background maintenance begins after the service is available and proceeds
   gradually, reducing slow recovery after an update or restart.
-- Busy request periods use available server capacity more effectively.
-- Annual variety listings refresh into one rolling-series card where supported.
 - Repeated refresh messages are quieter during busy periods while useful
   failure evidence remains available to operators.
 
@@ -33,19 +121,14 @@ describes behavior, not private implementation details.
   image retained through temporary upstream failures.
 - Multi-source catalog cards combine complementary artwork, descriptions,
   genres, cast, and identity data instead of replacing the whole card.
-- Dedicated Asian show and movie search reduces duplicate search shelves, while
-  faster source scheduling shortens slow or empty waits.
-- Long-running variety shows keep numbered or annual seasons together without
-  folding regional editions and spinoffs into the wrong series.
-- Direct, Proxy, and Debrid results are discovered independently so a slow lane
-  is less likely to hold back the others.
+- Catalog pages refresh more frequently while detailed title metadata keeps a
+  longer cache lifecycle.
 
 ### Note
 
-- Existing installs keep working. If Stremio keeps an older manifest cached,
-  reinstall the same profile URL once to reveal the new discovery and search
-  shelves.
-- Nightly/private additions remain separate until explicitly launched.
+- Existing default profiles gain the two discovery catalogs automatically.
+- Discovery results are availability-aware and use short stable pagination
+  snapshots so scrolling does not reshuffle continuously.
 
 ## [1.4.0] - 2026-07-18
 
@@ -86,6 +169,27 @@ describes behavior, not private implementation details.
 ## [1.2.0] - 2026-06-14
 
 ### Improved
+
+- Catalog and metadata lookups recover more gracefully when sources are slow or
+  temporarily unavailable.
+- Search pages avoid repeated empty refreshes during typo or no-match queries.
+- Posters and artwork are reused more efficiently so browsing feels smoother.
+- Metadata priority controls now explain when Auto or Source is the better
+  choice.
+- KissKH source-specific catalogs are available again as opt-in Asian drama and
+  movie rows after live source checks.
+- Playback checks are steadier across Anime, Asian drama, movies, and series.
+
+### Note
+
+- Existing installs keep working. Reinstall not required.
+- Nightly/private additions remain separate until they are explicitly launched.
+
+## [1.2.0] - 2026-06-13
+
+### Improved
+
+**Faster catalogs and smoother playback checks**
 
 - Catalog and metadata lookups recover more gracefully when sources are slow or
   temporarily unavailable.
