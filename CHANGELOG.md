@@ -3,6 +3,24 @@
 Notable user-facing changes per release. This public changelog intentionally
 describes behavior, not private implementation details.
 
+## [1.7.5] - 2026-08-30
+
+### Improved
+
+- Turning off every catalog now stays off after saving or editing a profile.
+- Setup prevents installs whose selected playback mode has no usable Direct,
+  Debrid, or P2P path.
+- Asian direct-source discovery handles more compact catalog references and
+  rejects confirmed video-only files.
+- Anime Real-Debrid results prefer more usable releases without changing
+  TorBox, P2P, Proxy, or Direct ordering.
+- Enriched Anime cards retain their proper episode and streaming identity more
+  consistently.
+- Search recovers more cleanly from temporary upstream and request-budget
+  interruptions.
+
+Existing installs keep working. Reinstall not required.
+
 ## [1.7.3] - 2026-08-02
 
 ### Improved
