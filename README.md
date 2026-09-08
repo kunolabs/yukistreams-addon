@@ -18,7 +18,7 @@
 </p>
 
 <p align="center">
-  <sub>Hosted service &nbsp;&middot;&nbsp; Closed-source implementation &nbsp;&middot;&nbsp; Bring your own credentials &nbsp;&middot;&nbsp; Latest notes: v1.7.5</sub>
+  <sub>Hosted service &nbsp;&middot;&nbsp; Closed-source implementation &nbsp;&middot;&nbsp; Bring your own credentials &nbsp;&middot;&nbsp; Latest notes: v1.7.6</sub>
 </p>
 
 ---
@@ -77,16 +77,11 @@ Availability varies by title, episode, region, profile, and upstream source. If
 a result cannot be checked or played safely, Yukistreams skips it rather than
 presenting it as ready.
 
-## What's new in v1.7.5
+## What's new in v1.7.6
 
-- Catalog-free profiles now remain catalog-free after saving or editing.
-- Setup catches playback combinations without a usable Direct, Debrid, or P2P
-  path before installation.
-- Asian direct-source discovery accepts more compact catalog references and
-  filters confirmed video-only files.
-- Anime Real-Debrid results favor more usable releases without changing other
-  playback lanes.
-- Search recovers more cleanly from temporary upstream interruptions.
+- Saved profile changes take effect more consistently across requests.
+- Slow upstream responses now respect their time limits through completion.
+- Additional security and session reliability improvements.
 
 Existing installs keep working; reinstalling is not required. See the
 [full public changelog](./CHANGELOG.md) for previous releases.

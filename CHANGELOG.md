@@ -3,6 +3,18 @@
 Notable user-facing changes per release. This public changelog intentionally
 describes behavior, not private implementation details.
 
+## [1.7.6] - 2026-09-08
+
+Yukistreams v1.7.6 is a small reliability and security update.
+
+### Improved
+
+- Saved profile changes take effect more consistently across requests.
+- Slow upstream responses now respect their time limits through completion.
+- Additional security and session reliability improvements.
+
+Existing installs keep working. Reinstall not required.
+
 ## [1.7.5] - 2026-08-30
 
 ### Improved
