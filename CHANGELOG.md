@@ -3,6 +3,20 @@
 Notable user-facing changes per release. This public changelog intentionally
 describes behavior, not private implementation details.
 
+## [1.7.7] - 2026-09-12
+
+Yukistreams v1.7.7 improves title and episode metadata reliability.
+
+### Improved
+
+- Title pages recover more reliably after temporary metadata lookup failures.
+- Enriched titles and artwork retain the correct show and episode identity.
+- Incomplete details can refresh sooner while complete title information stays more consistent.
+- More titles resolve correctly without additional metadata credentials.
+- Reduced pauses while loading artwork-heavy catalogs.
+
+Existing installs keep working. Reinstall not required. Playback availability still depends on the selected sources.
+
 ## [1.7.6] - 2026-09-08
 
 Yukistreams v1.7.6 is a small reliability and security update.

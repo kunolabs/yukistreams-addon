@@ -18,7 +18,7 @@
 </p>
 
 <p align="center">
-  <sub>Hosted service &nbsp;&middot;&nbsp; Closed-source implementation &nbsp;&middot;&nbsp; Bring your own credentials &nbsp;&middot;&nbsp; Latest notes: v1.7.6</sub>
+  <sub>Hosted service &nbsp;&middot;&nbsp; Closed-source implementation &nbsp;&middot;&nbsp; Bring your own credentials &nbsp;&middot;&nbsp; Latest notes: v1.7.7</sub>
 </p>
 
 ---
@@ -77,11 +77,13 @@ Availability varies by title, episode, region, profile, and upstream source. If
 a result cannot be checked or played safely, Yukistreams skips it rather than
 presenting it as ready.
 
-## What's new in v1.7.6
+## What's new in v1.7.7
 
-- Saved profile changes take effect more consistently across requests.
-- Slow upstream responses now respect their time limits through completion.
-- Additional security and session reliability improvements.
+- Title pages recover more reliably after temporary metadata lookup failures.
+- Enriched titles and artwork retain the correct show and episode identity.
+- Incomplete details can refresh sooner while complete title information stays more consistent.
+- More titles resolve correctly without additional metadata credentials.
+- Reduced pauses while loading artwork-heavy catalogs.
 
 Existing installs keep working; reinstalling is not required. See the
 [full public changelog](./CHANGELOG.md) for previous releases.
